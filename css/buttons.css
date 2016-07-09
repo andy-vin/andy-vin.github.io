@@ -1,0 +1,175 @@
+html {
+    font-size: 20px;
+}
+body {
+    background-color: #ccc;
+    padding: 50px;
+    text-align: center;
+}
+
+
+/* ===== Wrapper. Begin ===== */
+
+.icon-button {
+    background-color: white;
+    border-radius: 3.6rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2.0rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    margin: 0 5px;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 3.6rem;
+}
+
+/* ===== Wrapper. End ===== */
+
+/* ===== Circle. Begin ===== */
+
+.icon-button span {
+    border-radius: 0;
+    display: block;
+    height: 0;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 0;
+}
+.icon-button:hover span {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 3.6rem;
+    margin: -1.8rem;
+}
+.twitter span {
+    background-color: #4099ff;
+}
+.facebook span {
+    background-color: #3B5998;
+}
+.google-plus span {
+    background-color: #db5a3c;
+}
+
+/* ===== Circle. End ===== */
+
+/* ===== Icons. Begin ===== */
+
+.icon-button i {
+    background: none;
+    color: white;
+    height: 3.6rem;
+    left: 0;
+    line-height: 3.6rem;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 3.6rem;
+    z-index: 10;
+}
+.icon-button .icon-twitter {
+    color: #4099ff;
+}
+.icon-button .icon-facebook {
+    color: #3B5998;
+}
+.icon-button .icon-google-plus {
+    color: #db5a3c;
+}
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook,
+.icon-button:hover .icon-google-plus {
+    color: white;
+}
+
+/* ===== Icons. End ===== */
+
+/* ===== Tooltip. Begin ===== */
+
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::before,
+[data-tooltip]::after {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+    -webkit-transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transition: transform 0.3s ease-out, opacity, 0.3s ease-out;
+    -webkit-transform: translate(0, -15px);
+    transform: translate(0, -15px);
+    -webkit-backface-visibility: hidden;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    width: 100px;
+    height: auto;
+    padding: 7px 10px;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    margin: 0 auto -120px -60px;
+    font-family: Georgia, serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 14px;
+    color: #4a5257;
+    line-height: 20px;
+    text-align: center;
+    background: rgba(255,255,255,0.9);
+    text-indent: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+[data-tooltip]::after{
+    content: '';
+    bottom: calc(100% - 3px);
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    margin: 0 auto -80px -10px;
+    border-bottom: 10px solid rgba(255,255,255,0.9);
+}
+
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after,
+[data-tooltip]:focus::before,
+[data-tooltip]:focus::after {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+    transition-delay: 100ms;
+}
+
+/* ===== Tooltip. End ===== */
+
+/* ===== Block for id's. Begin ===== */
+
+#first {
+    margin-bottom: 20px;
+}
+
+/* ===== Block for id's. End ===== */
