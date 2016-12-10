@@ -417,6 +417,10 @@ header.nav.hide-menu {
     margin: 8px 0;
 }
 
+.primary-nav .nav-wrapper .button-collapse .mdi-navigation-menu {
+    color: white;
+}
+
 .mobile-profile{
     display: none;
 }
